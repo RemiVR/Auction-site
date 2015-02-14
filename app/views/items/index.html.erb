@@ -1,9 +1,12 @@
 <h2>Display item</h2>
 <ul>
 	<% @item.each do |item|%>
-	<li><%= item.name%><br> Bid: </li>
+	<li><%= item.name%><br>
+	<%= image_tag item.logo.url(:medium)%>
+	
+	</li>
 	<%end%>
 </ul>
 <br>
-<%= image_tag @item.logo.url(:medium)%>
+
 	<%= link_to("add new item", new_item_path)%>
