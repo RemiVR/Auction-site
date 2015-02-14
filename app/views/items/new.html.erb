@@ -1,0 +1,24 @@
+<%if @item.errors.any? %>
+	<ul>
+		<% @item.errors.full_messages.each do |errors_msg| %>
+		<li><%= errors_msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @item, :html => { :multipart => true } do |f|%>
+	<%= f.label :name%>
+	<%= f.text_field :name%>
+	<br>
+	<%= f.label :price%>
+	<%= f.text_field :price%>
+	<br>
+	<%= f.label :expire%>
+	<%= f.date_field :expire%>
+	<br>
+	<%= f.label :logo%>
+	<%= f.file_field :logo%>
+	<br>
+	<%= f.submit 'Add item'%>
+<%end%>
+<%= link_to("back", items_path)%>
