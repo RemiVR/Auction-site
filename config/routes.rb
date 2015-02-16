@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   get '/' => "site#home"
 
-    resources :items
+    resources :items do
+    resources :bids
+  end
     resources :users
-
 # ROUTES
 #    Prefix Verb   URI Pattern               Controller#Action
 #           GET    /                         site#home

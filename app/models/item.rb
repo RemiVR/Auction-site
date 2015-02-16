@@ -1,4 +1,5 @@
 class Item < ActiveRecord::Base
+	has_many :bids
 
 	validates :name, presence: true
 	validates :price, presence: true, numericality: true
