@@ -1,12 +1,14 @@
 <h2>Display item</h2>
 <ul>
 	<% @item.each do |item|%>
-	<li><%= item.name%><br>
-	<%= image_tag item.logo.url(:medium)%>
-	
+	<li><h3><%= item.name%></h3><br>
+	<%= image_tag item.logo.url(:thumb)%><br>
+	Bid
 	</li>
+	<hr>
 	<%end%>
 </ul>
 <br>
 
-	<%= link_to("add new item", new_item_path)%>
+<%= link_to("add new item", new_item_path)%>
+

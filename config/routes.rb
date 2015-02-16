@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   get '/' => "site#home"
- resources :auctions do
+
     resources :items
-end
-resources :users
+    resources :users
 
 # ROUTES
 #    Prefix Verb   URI Pattern               Controller#Action
@@ -16,6 +15,16 @@ resources :users
 #           PATCH  /items/:id(.:format)      items#update
 #           PUT    /items/:id(.:format)      items#update
 #           DELETE /items/:id(.:format)      items#destroy
+#     users GET    /users(.:format)          users#index
+#           POST   /users(.:format)          users#create
+#  new_user GET    /users/new(.:format)      users#new
+# edit_user GET    /users/:id/edit(.:format) users#edit
+#      user GET    /users/:id(.:format)      users#show
+#           PATCH  /users/:id(.:format)      users#update
+#           PUT    /users/:id(.:format)      users#update
+#           DELETE /users/:id(.:format)      users#destroy
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
