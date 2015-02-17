@@ -1,1 +1,4 @@
-new.html.erb
+<%= form_for @bid do |f|%>
+	<%= f.label "€" %>
+	<%= f.number_field :amount, placeholder: "99,99" %>
+<%end%>
